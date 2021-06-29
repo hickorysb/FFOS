@@ -49,6 +49,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DatabaseConnector.cs" />
+    <Compile Include="Employee.cs" />
+    <Compile Include="PermissionLevel.cs" />
+    <Compile Include="Session.cs" />
     <Compile Include="DriveThruOrder.cs">
       <SubType>Form</SubType>
     </Compile>
