@@ -23,14 +23,20 @@ namespace FFOS
         {
             DatabaseConnector.data[0] = new Employee(1113674, "Jackson", "Abney", 0);
             DatabaseConnector.data[1] = new Employee(1113789, "Ezra", "Gilmore", 1);
-            DatabaseConnector.data[2] = new Employee(1113674, "Ethan", "Brandt", 2);
-            DatabaseConnector.data[3] = new Employee(1113674, "Steve", "Fall", 3);
-            DatabaseConnector.data[4] = new Employee(1113674, "Tracy", "Stevens", 4);
+            DatabaseConnector.data[2] = new Employee(1113954, "Ethan", "Brandt", 2);
+            DatabaseConnector.data[3] = new Employee(1524852, "Steve", "Fall", 3);
+            DatabaseConnector.data[4] = new Employee(1125854, "Tracy", "Stevens", 4);
+            employees = new Employee[data.Length];
             for (int i = 0; i < data.Length; i++)
             {
-
+                employees[i] = data[i];
             }
             return true;
+        }
+
+        public static Employee GetEmployeeByEID(int uid)
+        {
+            return employees.Where((Employee e) => e.getEmployeeID() == uid).DefaultIfEmpty(null).First();
         }
     }
 }

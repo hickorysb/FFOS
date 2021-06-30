@@ -14,7 +14,26 @@ namespace FFOS
 
         public Session(int uid)
         {
+            loggedInEmployee = DatabaseConnector.GetEmployeeByEID(uid);
+            validSession = true;
+        }
 
+        public Employee GetSignedInEmployee()
+        {
+            return loggedInEmployee;
+        }
+
+        public bool IsValidSession()
+        {
+            if (validSession && loggedInEmployee != null && loggedInEmployee.isEmployeeClockedIn())
+            {
+                return true;
+            }
+            else
+            {
+                validSession = false;
+                return false;
+            }
         }
     }
 }

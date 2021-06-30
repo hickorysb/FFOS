@@ -46,6 +46,7 @@ namespace FFOS
             this.progressBar1.Location = new System.Drawing.Point(5, 185);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(357, 23);
+            this.progressBar1.Style = System.Windows.Forms.ProgressBarStyle.Marquee;
             this.progressBar1.TabIndex = 0;
             // 
             // Data
@@ -54,21 +55,22 @@ namespace FFOS
             this.Data.Location = new System.Drawing.Point(5, 144);
             this.Data.Margin = new System.Windows.Forms.Padding(0);
             this.Data.Name = "Data";
-            this.Data.Size = new System.Drawing.Size(351, 35);
+            this.Data.Padding = new System.Windows.Forms.Padding(0);
+            this.Data.Size = new System.Drawing.Size(357, 35);
             this.Data.TabIndex = 1;
             this.Data.TabStop = false;
             // 
             // label1
             // 
             this.label1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(3, 16);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(0, 13);
             this.label1.Margin = new System.Windows.Forms.Padding(0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(345, 16);
+            this.label1.Size = new System.Drawing.Size(357, 22);
             this.label1.TabIndex = 0;
             this.label1.Text = "Connecting to POS Operations server...";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
             // 
             // pictureBox1
             // 

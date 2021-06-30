@@ -250,7 +250,7 @@ namespace FFOS
             // 
             this.signedInEmployeeName.Font = new System.Drawing.Font("Georgia", 14F, System.Drawing.FontStyle.Bold);
             this.signedInEmployeeName.Name = "signedInEmployeeName";
-            this.signedInEmployeeName.Size = new System.Drawing.Size(1755, 23);
+            this.signedInEmployeeName.Size = new System.Drawing.Size(1786, 23);
             this.signedInEmployeeName.Spring = true;
             this.signedInEmployeeName.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
@@ -265,6 +265,7 @@ namespace FFOS
             this.button1.TabIndex = 0;
             this.button1.Text = "Sign-In";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 

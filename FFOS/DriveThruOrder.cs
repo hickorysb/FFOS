@@ -12,6 +12,9 @@ namespace FFOS
 {
     public partial class DriveThruOrder : Form
     {
+        private Session sesh = null;
+        private Timer logout;
+
         public DriveThruOrder()
         {
             InitializeComponent();
@@ -29,6 +32,27 @@ namespace FFOS
             dataGridView1.Rows.Add("DT", 8, "DW", "DO");
             dataGridView1.Rows.Add("DT", 9, "DW", "");
             dataGridView1.Rows.Add("DT", "Green,SUV", "DW", "");
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            //SIGN-IN
+
+            var idf = new IDEntry();
+            DialogResult res = idf.ShowDialog();
+            if (res == DialogResult.OK)
+            {
+                sesh = new Session(idf.Result);
+                if (sesh.IsValidSession())
+                {
+                    signedInEmployeeName.Text = sesh.GetSignedInEmployee().getEmployeeNames()[1];
+                }
+                else
+                {
+                    sesh = null;
+                    MessageBox.Show("Could not locate an employee by that ID.");
+                }
+            }
         }
     }
 }
