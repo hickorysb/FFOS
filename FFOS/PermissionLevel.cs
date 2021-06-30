@@ -6,8 +6,5 @@ using System.Threading.Tasks;
 
 namespace FFOS
 {
-    class PermissionLevel
-    {
-        
-    }
+    class PermissionLevel {}
 }
