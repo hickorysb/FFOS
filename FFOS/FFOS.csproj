@@ -111,6 +111,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="FFOS Logo.ico" />
+    <None Include="README.md" />
     <None Include="Resources\FFOS Banner.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
