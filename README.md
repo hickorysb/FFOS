@@ -1,4 +1,5 @@
 # Fast Food Open Sourced (FFOS)
+[![CodeFactor](https://www.codefactor.io/repository/github/hickorysb/ffos/badge/login)](https://www.codefactor.io/repository/github/hickorysb/ffos/overview/login)
 
 FFOS is an opensource alternative to the other available POS systems for fast food companies. While this system is engineered with fast food in mind other family restaurants and large chains could adapt the system to work in their environments. The high costs of other available software prohibits smaller restaurants from taking advantage of the benefits of having one system that can handle employee hours, owed money, orders, and profits. Being opensource this software is free to use, redistribute, and edit. You may **NOT** sell this software in it's entirety or in pieces. While you may maintain your own fork, we ask that you consider contributing to this project by submitting pull requests. This allows everyone to enjoy the work that you put into this platform. You will also earn yourself a chance to be added to the credits.
 
