@@ -11,16 +11,28 @@ namespace FFOS
         private DateTime loginTime = DateTime.Now;
         private Employee loggedInEmployee;
         private bool validSession;
+        public bool EmployeeFound;
+        public bool EmployeeClockedIn;
 
         public Session(int uid)
         {
             loggedInEmployee = DatabaseConnector.GetEmployeeByEID(uid);
             validSession = true;
+            EmployeeFound = loggedInEmployee != null ? true : false;
+            if (EmployeeFound)
+            {
+                EmployeeClockedIn = loggedInEmployee.isEmployeeClockedIn();
+            }
         }
 
         public Employee GetSignedInEmployee()
         {
             return loggedInEmployee;
+        }
+
+        public bool IsSessionEmployeeClockedIn()
+        {
+            return loggedInEmployee.isEmployeeClockedIn();
         }
 
         public bool IsValidSession()
