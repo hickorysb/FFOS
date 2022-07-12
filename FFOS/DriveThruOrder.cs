@@ -47,12 +47,47 @@ namespace FFOS
                 {
                     signedInEmployeeName.Text = sesh.GetSignedInEmployee().getEmployeeNames()[1];
                 }
-                else
+                else if (!sesh.EmployeeFound)
                 {
                     sesh = null;
                     MessageBox.Show("Could not locate an employee by that ID.");
                 }
+                else if (!sesh.EmployeeClockedIn)
+                {
+                    MessageBox.Show("You are not clocked in!");
+                }
+                else
+                {
+                    MessageBox.Show("An unknown error has occurred.");
+                }
             }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            //Clock In/Out
+
+            var idf = new IDEntry();
+            DialogResult res = idf.ShowDialog();
+            if (res == DialogResult.OK)
+            {
+                sesh = new Session(idf.Result);
+                if (!sesh.EmployeeFound)
+                {
+                    sesh = null;
+                    MessageBox.Show("Could not locate an employee by that ID.");
+                }
+                else if (!sesh.EmployeeClockedIn)
+                {
+                    var tc = new EmployeeTimeClock(sesh.GetSignedInEmployee());
+                    tc.ShowDialog();
+                }
+                else
+                {
+                    MessageBox.Show("An unknown error has occurred.");
+                }
+            }
+            sesh = null;
         }
     }
 }

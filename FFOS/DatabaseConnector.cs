@@ -21,11 +21,17 @@ namespace FFOS
 
         public static bool PullEmployeeData()
         {
-            DatabaseConnector.data[0] = new Employee(1113674, "Jackson", "Abney", 0);
-            DatabaseConnector.data[1] = new Employee(1113789, "Ezra", "Gilmore", 1);
-            DatabaseConnector.data[2] = new Employee(1113954, "Ethan", "Brandt", 2);
-            DatabaseConnector.data[3] = new Employee(1524852, "Steve", "Fall", 3);
-            DatabaseConnector.data[4] = new Employee(1125854, "Tracy", "Stevens", 4);
+            Dictionary<int, string> jobs = new Dictionary<int, string>();
+            jobs.Add(157, "Manager");
+            jobs.Add(1, "Crew");
+            Dictionary<int, double> pay = new Dictionary<int, double>();
+            pay.Add(157, 16.00);
+            pay.Add(1, 11.00);
+            data[0] = new Employee(1113674, "Jackson", "Abney", 0, jobs, pay);
+            data[1] = new Employee(1113789, "Ezra", "Gilmore", 1);
+            data[2] = new Employee(1113954, "Ethan", "Brandt", 2);
+            data[3] = new Employee(1524852, "Steve", "Fall", 3);
+            data[4] = new Employee(1125854, "Tracy", "Stevens", 4);
             employees = new Employee[data.Length];
             for (int i = 0; i < data.Length; i++)
             {

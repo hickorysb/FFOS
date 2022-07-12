@@ -230,6 +230,7 @@ namespace FFOS
             // 
             // statusStrip1
             // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(28, 28);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
             this.signedInEmployeeName});
@@ -278,6 +279,7 @@ namespace FFOS
             this.button2.TabIndex = 1;
             this.button2.Text = "Clock In/Out";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // panel1
             // 
@@ -303,7 +305,7 @@ namespace FFOS
             this.MinimizeBox = false;
             this.Name = "DriveThruOrder";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "DriveThruOrder";
+            this.Text = "d";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Shown += new System.EventHandler(this.DriveThruOrder_Shown);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
